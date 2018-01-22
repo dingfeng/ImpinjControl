@@ -1350,8 +1350,8 @@ namespace ImpinjControl
                             filter.C1G2TagInventoryMask.Pointer = (ushort)(32+k*4);
                             filter.C1G2TagInventoryMask.TagMask = LLRPBitArray.FromHexString(antennaConfiguration.mask.Substring(k,1));
                             filter.C1G2TagInventoryStateUnawareFilterAction = new PARAM_C1G2TagInventoryStateUnawareFilterAction();
-                            filter.C1G2TagInventoryStateUnawareFilterAction.Action = ENUM_C1G2StateUnawareAction.Select_Unselect;
-                            list.Add(filter);
+                            filter.C1G2TagInventoryStateUnawareFilterAction.Action = ENUM_C1G2StateUnawareAction.DoNothing_Unselect;
+                            list.Add(filter); 
                         }
                     }
                     c1G2Command.C1G2Filter=list.ToArray();
